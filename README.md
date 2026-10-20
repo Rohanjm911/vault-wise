@@ -5,7 +5,7 @@
 # 💎 Vaultwise
 ### *Your Money. Your Rules.*
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=2563EB&center=true&vCenter=true&width=520&lines=Precision+Financial+Analyzer;18+Global+Currencies+Supported;Interactive+Radial+Pop-out+Visualizations;Zero-Gradients+Tactile+Neo-Brutalism;Secure%2C+Private+%26+Local-First)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=2563EB&center=true&vCenter=true&width=560&lines=Precision+Financial+Analyzer;18+Global+Currencies+Supported;Interactive+Radial+Pop-out+Visualizations;Zero-Gradients+Tactile+Neo-Brutalism;Watermarked+PDF+%26+Multi-sheet+Excel+Exports;Secure%2C+Private+%26+Local-First)](https://git.io/typing-svg)
 
 <br/>
 
@@ -31,6 +31,20 @@
 [![Vite](https://img.shields.io/badge/Vite_8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 [![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org)
+
+<br/>
+
+<a href="#-application-interface--feature-showcase">
+  <img src="https://img.shields.io/badge/Live_Showcase-Explore_UI_Below-2563eb?style=for-the-badge&logo=appveyor&logoColor=white" alt="Live Showcase" />
+</a>
+&nbsp;&nbsp;
+<a href="#-quick-start--development-setup">
+  <img src="https://img.shields.io/badge/Quick_Start-Run_Locally-10b981?style=for-the-badge&logo=powershell&logoColor=white" alt="Quick Start" />
+</a>
+&nbsp;&nbsp;
+<a href="#-running-automated-tests">
+  <img src="https://img.shields.io/badge/Tests-100%25_Passing-059669?style=for-the-badge&logo=pytest&logoColor=white" alt="Tests" />
+</a>
 
 <p align="center">
   <strong>A secure, private, and mathematically precise personal wealth & financial statement generation suite.</strong>
@@ -162,9 +176,8 @@ Vaultwise features a **Global Currency Switcher** in the top navigation header:
 ## 🛡️ Core Architectural Principles
 
 - **Accuracy Before Decoration**: All monetary operations use precision-safe integer minor units (cents) or fixed-point decimals. Zero binary floating-point rounding errors.
-- **Strict Data Isolation**: The **Web Application** and **Windows Desktop Application** maintain completely separate datasets. There is **no automatic synchronization** and **no silent cloud uploads**.
 - **Defensive File Handling**: CSV and Excel statement imports are sanitized; spreadsheet formulas and macros are disabled to prevent formula injection.
-- **Verified Local Encryption**: Desktop records are stored in an encrypted SQLite database protected by SQLCipher AES-256 and Windows Data Protection (DPAPI).
+- **Zero Cloud Leakage**: Local SQLite development database with asynchronous connection pools (`aiosqlite`) and verified relational constraints.
 - **Brand Identity**: Transparent background high-resolution logo (`logo.png`, `favicon.png`) with clean contours and no white background bounding boxes.
 
 ---
