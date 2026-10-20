@@ -42,6 +42,41 @@
 
 ---
 
+## 🖼️ Application Interface & Feature Showcase
+
+<div align="center">
+
+### 📊 Real-Time Financial Dashboard
+*Interactive KPI summary cards, category donut breakdown with radial pop-out hover animations, and spending trends.*
+<br/><br/>
+<img src="docs/screenshots/dashboard.png" width="95%" style="border-radius: 8px; border: 2px solid #0f172a; box-shadow: 4px 4px 0px #0f172a;" alt="Vaultwise Financial Dashboard" />
+
+<br/><br/>
+
+<table width="100%">
+<tr>
+<td width="50%" align="center">
+  <b>🧾 Transaction Register & Search</b><br/><br/>
+  <img src="docs/screenshots/transactions.png" width="100%" style="border-radius: 6px; border: 2px solid #0f172a;" alt="Transaction Register" />
+</td>
+<td width="50%" align="center">
+  <b>🎯 Monthly Category Budgets & Caps</b><br/><br/>
+  <img src="docs/screenshots/budgets.png" width="100%" style="border-radius: 6px; border: 2px solid #0f172a;" alt="Budget Management" />
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+  <br/>
+  <b>📑 Statements, Excel & Watermarked PDF Reports</b><br/><br/>
+  <img src="docs/screenshots/reports.png" width="95%" style="border-radius: 6px; border: 2px solid #0f172a;" alt="Statements and Reports" />
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
 Vaultwise helps individuals understand, organize, and analyze personal finances without relying on third-party aggregators or cloud surveillance. Record income and expenses, establish budgets, inspect spending history, import bank statements, and discover actionable spending patterns.
 
 ---
