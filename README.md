@@ -1,22 +1,29 @@
-# Vaultwise — Your Money. Your Rules.
-
 <div align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="38" height="38" alt="Python" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="38" height="38" alt="FastAPI" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="38" height="38" alt="React" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="38" height="38" alt="TypeScript" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="38" height="38" alt="Vite" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="38" height="38" alt="Tailwind" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="38" height="38" alt="SQLite" />
+<img src="apps/web/public/logo.png" width="160" alt="Vaultwise Logo" />
+
+# 💎 Vaultwise
+### *Your Money. Your Rules.*
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=2563EB&center=true&vCenter=true&width=520&lines=Precision+Financial+Analyzer;18+Global+Currencies+Supported;Interactive+Radial+Pop-out+Visualizations;Zero-Gradients+Tactile+Neo-Brutalism;Secure%2C+Private+%26+Local-First)](https://git.io/typing-svg)
 
 <br/>
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="36" height="36" alt="Python" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="36" height="36" alt="FastAPI" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="36" height="36" alt="React" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="36" height="36" alt="TypeScript" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="36" height="36" alt="Vite" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="36" height="36" alt="Tailwind" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="36" height="36" alt="SQLite" />
+
+<br/><br/>
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev)
@@ -26,8 +33,10 @@
 [![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org)
 
 <p align="center">
-  <strong>A secure, private, and precise personal finance analyzer and financial statement generation suite.</strong>
+  <strong>A secure, private, and mathematically precise personal wealth & financial statement generation suite.</strong>
 </p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=2563eb&height=70&section=header" width="100%" />
 
 </div>
 
@@ -39,8 +48,8 @@ Vaultwise helps individuals understand, organize, and analyze personal finances 
 
 ## 📌 Dedicated Guides & Documentation
 
-- 🚀 **[how to run.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/how%20to%20run.md)** — Complete step-by-step run instructions for Backend (FastAPI), Web (React), and Desktop (Flutter) with troubleshooting and demo credentials.
-- 📦 **[packages and extentions needed .md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/packages%20and%20extentions%20needed%20.md)** — Exhaustive inventory of VS Code extensions, system runtimes, Python packages, npm dependencies, and Flutter plugins.
+- 🚀 **[how to run.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/how%20to%20run.md)** — Complete step-by-step run instructions for Backend (FastAPI) and Web (React 19) with troubleshooting and demo credentials.
+- 📦 **[packages and extensions needed.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/packages%20and%20extensions%20needed.md)** — Exhaustive inventory of VS Code extensions, system runtimes, Python packages, and npm dependencies.
 
 ---
 
@@ -248,6 +257,10 @@ For instant evaluation of the Web Application:
 
 ## 🧪 Running Automated Tests
 
+<details open>
+<summary><b>▶ Click to expand / collapse Test Suites</b></summary>
+<br/>
+
 - **Backend Test Suite (Pytest)**:
   ```powershell
   cd services/api
@@ -261,9 +274,15 @@ For instant evaluation of the Web Application:
   ```
   _4/4 test files, 8/8 tests passed (currency switching, summary cards, pie chart hover pop-out, authentication flows)._
 
+</details>
+
 ---
 
 ## 📚 Technical Documentation Links
+
+<details>
+<summary><b>📖 Explore Deep Architecture & Specifications (Click to expand)</b></summary>
+<br/>
 
 - [docs/FEATURES.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/FEATURES.md) — 14-point audit of all implemented features
 - [docs/ARCHITECTURE.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/ARCHITECTURE.md) — System architecture & data structure
@@ -276,8 +295,18 @@ For instant evaluation of the Web Application:
 - [docs/WEB_DEPLOYMENT.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/WEB_DEPLOYMENT.md) — Production web deployment and reverse proxy
 - [docs/DEVELOPMENT_LOG.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/DEVELOPMENT_LOG.md) — Engineering progress log
 
+</details>
+
 ---
 
-## 📄 License
+<div align="center">
 
-This project is licensed under the [MIT License](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/LICENSE).
+<img src="https://capsule-render.vercel.app/api?type=waving&color=2563eb&height=70&section=footer" width="100%" />
+
+<sub>Vaultwise — Financial Statement & Personal Wealth Management (Your Money. Your Rules.)</sub>
+
+<br/>
+
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/LICENSE)
+
+</div>
