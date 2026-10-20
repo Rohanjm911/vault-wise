@@ -65,10 +65,13 @@
 </td>
 </tr>
 <tr>
-<td colspan="2" align="center">
-  <br/>
-  <b>📑 Statements, Excel & Watermarked PDF Reports</b><br/><br/>
-  <img src="docs/screenshots/reports.png" width="95%" style="border-radius: 6px; border: 2px solid #0f172a;" alt="Statements and Reports" />
+<td width="50%" align="center">
+  <b>📑 Reports & Export Control Center</b><br/><br/>
+  <img src="docs/screenshots/reports.png" width="100%" style="border-radius: 6px; border: 2px solid #0f172a;" alt="Statements and Reports Screen" />
+</td>
+<td width="50%" align="center">
+  <b>📄 Generated Official PDF Statement (Watermarked)</b><br/><br/>
+  <img src="docs/screenshots/pdf_statement.png" width="100%" style="border-radius: 6px; border: 2px solid #0f172a;" alt="Official Watermarked PDF Statement" />
 </td>
 </tr>
 </table>
