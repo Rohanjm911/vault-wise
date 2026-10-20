@@ -1,0 +1,77 @@
+# Vaultwise — Git Ignore Rules
+
+# Python & FastAPI
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node.js & Web Frontend
+node_modules/
+.npm/
+apps/web/dist/
+apps/web/dist-ssr/
+*.local
+.eslintcache
+
+# Flutter & Windows Desktop
+.dart_tool/
+.packages
+apps/desktop/.dart_tool/
+apps/desktop/.packages
+apps/desktop/build/
+apps/desktop/windows/flutter/ephemeral/
+*.pub/
+*.pub-cache/
+
+# Databases & Local state
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Secrets & Environment
+.env
+.env.local
+.env.production
+*.pem
+*.key
+
+# IDEs & System
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Desktop standalone builds
+Vaultwise-Desktop-App/
+*.spec
+
