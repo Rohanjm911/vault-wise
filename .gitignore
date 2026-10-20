@@ -37,16 +37,6 @@ apps/web/dist-ssr/
 *.local
 .eslintcache
 
-# Flutter & Windows Desktop
-.dart_tool/
-.packages
-apps/desktop/.dart_tool/
-apps/desktop/.packages
-apps/desktop/build/
-apps/desktop/windows/flutter/ephemeral/
-*.pub/
-*.pub-cache/
-
 # Databases & Local state
 *.db
 *.sqlite
@@ -71,7 +61,4 @@ Thumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# Desktop standalone builds
-Vaultwise-Desktop-App/
-*.spec
 

@@ -14,10 +14,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="38" height="38" alt="Tailwind" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="38" height="38" alt="Flutter" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" width="38" height="38" alt="Dart" />
-&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="38" height="38" alt="SQLite" />
 
 <br/>
@@ -27,7 +23,6 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite_8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
-[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org)
 
 <p align="center">
@@ -137,9 +132,7 @@ Vaultwise features a **Global Currency Switcher** in the top navigation header:
 | **TypeScript**   |   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="32" height="32" alt="TypeScript" />   |    `~7.0.2`    | Static type safety and developer productivity  |
 | **Vite**         |          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="32" height="32" alt="Vite" />          |    `^8.3.4`    | Frontend bundler & dev server                  |
 | **Tailwind CSS** | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="32" height="32" alt="Tailwind CSS" /> |   `^3.4.19`    | Neumorphic + Neo-Brutalist utility system      |
-| **Flutter**      |       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="32" height="32" alt="Flutter" />        |   `^3.47.0`    | Native Windows desktop compilation target      |
-| **Dart**         |            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" width="32" height="32" alt="Dart" />            |   `^3.13.4`    | Client-side desktop programming language       |
-| **SQLite**       |         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="32" height="32" alt="SQLite" />         |  `3.x / FFI`   | Local storage with AES-256 database encryption |
+| **SQLite**       |         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="32" height="32" alt="SQLite" />         |  `3.x / FFI`   | Local development database storage             |
 | **PostgreSQL**   |   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="32" height="32" alt="PostgreSQL" />   |     `16+`      | Production relational database                 |
 | **SQLAlchemy**   |   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" width="32" height="32" alt="SQLAlchemy" />   |   `^2.0.38`    | Modern async Python ORM                        |
 
@@ -150,20 +143,16 @@ Vaultwise features a **Global Currency Switcher** in the top navigation header:
 ```
 vaultwise/
 ├── how to run.md                    # Detailed run instructions & demo accounts
-├── packages and extentions needed .md # Complete inventory of packages & extensions
+├── packages and extensions needed.md # Complete inventory of packages & extensions
 ├── apps/
-│   ├── web/                         # React 19 + Vite web application
-│   │   ├── dist/                    # Compiled production build artifacts
-│   │   ├── src/
-│   │   │   ├── components/          # Card, Modal, Badge, Header, Sidebar, CurrencySwitcher
-│   │   │   ├── constants/           # Currency definitions & formats
-│   │   │   ├── features/            # Auth, Dashboard, Transactions, Budgets, History, Reports, Settings
-│   │   │   ├── services/            # REST API client & file downloaders
-│   │   │   └── test/                # Vitest unit & component test suites
-│   └── desktop/                     # Native Flutter Windows desktop application
-│       └── lib/
-│           ├── core/                # Database helper, SQLCipher encryption, models
-│           └── features/            # Dashboard, Transactions, Budgets, History, Categories
+│   └── web/                         # React 19 + Vite web application
+│       ├── dist/                    # Compiled production build artifacts
+│       ├── src/
+│       │   ├── components/          # Card, Modal, Badge, Header, Sidebar, CurrencySwitcher
+│       │   ├── constants/           # Currency definitions & formats
+│       │   ├── features/            # Auth, Dashboard, Transactions, Budgets, History, Reports, Settings
+│       │   ├── services/            # REST API client & file downloaders
+│       │   └── test/                # Vitest unit & component test suites
 ├── services/
 │   └── api/                         # FastAPI backend (PostgreSQL/SQLite, Alembic, Auth)
 │       ├── app/                     # Routers, schemas, business logic, analytics engine
@@ -175,14 +164,13 @@ vaultwise/
 │   └── shared-specs/                # Calculation rules and shared data schemas
 ├── docs/                            # Complete technical documentation
 │   ├── FEATURES.md                  # 14-point audit of all implemented features
-│   ├── ARCHITECTURE.md              # System design & Web/Desktop data separation
+│   ├── ARCHITECTURE.md              # System design & Web data architecture
 │   ├── DATABASE.md                  # Schemas, precision rules & migrations
 │   ├── API.md                       # OpenAPI REST endpoint specifications
 │   ├── SECURITY.md                  # Threat model & encryption architecture
 │   ├── UI_UX.md                     # Design system tokens (Solid colors only)
 │   ├── TESTING.md                   # Test matrix & edge cases
 │   ├── IMPORT_EXPORT.md             # CSV/Excel parsing and report specifications
-│   ├── WINDOWS_BUILD.md             # Windows desktop build instructions
 │   ├── WEB_DEPLOYMENT.md            # Production web deployment and reverse proxy
 │   └── DEVELOPMENT_LOG.md           # Timestamped engineering progress log
 ├── .env.example                     # Environment variable template
@@ -221,19 +209,11 @@ npm run dev
 
 - **Active Dev Server**: `http://localhost:5173/`
 
-### 3. Windows Desktop Setup (`apps/desktop`)
-
-```powershell
-cd apps/desktop
-flutter pub get
-flutter run -d windows
-```
-
 ---
 
 ## 📦 Build Artifacts & Output Locations
 
-### 1. Web Application Production Build
+### Web Application Production Build
 
 - **Build Output Directory**: [`apps/web/dist/`](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/apps/web/dist/)
 - **Build Command**:
@@ -252,20 +232,6 @@ flutter run -d windows
   - `assets/`: Minified JavaScript chunks (`index-*.js`) and CSS bundles (`index-*.css`).
   - `logo.png` & `favicon.png`: High-resolution transparent brand icons.
   - `manifest.json` & `icons/`: PWA offline manifest and icons.
-
-### 2. Windows Desktop Native Release Build
-
-- **Build Output Directory**: [`apps/desktop/build/windows/x64/runner/Release/`](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/apps/desktop/build/windows/x64/runner/Release/)
-- **Build Command**:
-  ```powershell
-  cd apps/desktop
-  flutter build windows --release
-  ```
-- **Output Artifacts**:
-  - `desktop.exe`: Native 64-bit Windows executable.
-  - `flutter_windows.dll`: Flutter Windows engine runtime.
-  - `sqflite_common_ffi.dll`: Encrypted SQLite C-FFI runtime binaries.
-  - `data/`: Bundled asset bundle, icons, fonts, and application manifests.
 
 ---
 
@@ -294,25 +260,20 @@ For instant evaluation of the Web Application:
   npm test -- --run
   ```
   _4/4 test files, 8/8 tests passed (currency switching, summary cards, pie chart hover pop-out, authentication flows)._
-- **Desktop Application Tests (Flutter)**:
-  ```powershell
-  cd apps/desktop
-  flutter test
-  ```
 
 ---
 
 ## 📚 Technical Documentation Links
 
 - [docs/FEATURES.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/FEATURES.md) — 14-point audit of all implemented features
-- [docs/ARCHITECTURE.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/ARCHITECTURE.md) — System architecture & data separation
+- [docs/ARCHITECTURE.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/ARCHITECTURE.md) — System architecture & data structure
 - [docs/DATABASE.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/DATABASE.md) — Database schemas & integer precision rules
 - [docs/API.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/API.md) — REST API endpoint documentation
 - [docs/SECURITY.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/SECURITY.md) — Threat model & encryption architecture
 - [docs/UI_UX.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/UI_UX.md) — Design system tokens & Neumorphism + Neo-Brutalism combo
 - [docs/TESTING.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/TESTING.md) — Test matrix & edge case verification
 - [docs/IMPORT_EXPORT.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/IMPORT_EXPORT.md) — Statement import/export engine
-- [docs/WINDOWS_BUILD.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/WINDOWS_BUILD.md) — Windows desktop packaging instructions
+- [docs/WEB_DEPLOYMENT.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/WEB_DEPLOYMENT.md) — Production web deployment and reverse proxy
 - [docs/DEVELOPMENT_LOG.md](file:///d:/projects%20and%20certificates/projects/uilities%20and%20others/Vault%20wise/docs/DEVELOPMENT_LOG.md) — Engineering progress log
 
 ---

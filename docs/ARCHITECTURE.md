@@ -4,72 +4,48 @@
 
 **Vaultwise** is a privacy-first, professional personal finance analyzer built under the philosophy: **"Your Money. Your Rules."**
 
-The project delivers two distinct client applications:
-1. **Web Application**: Accessible via modern desktop and mobile browsers, built with React, TypeScript, Tailwind CSS, Vite, and Recharts, backed by a FastAPI REST API and a PostgreSQL database.
-2. **Native Windows Desktop Application**: An offline-first, locally encrypted desktop application built with Flutter & Dart, storing data in an encrypted SQLite database using SQLCipher and Windows secure credential protection.
+The platform delivers a responsive, modern web application accessible via desktop and mobile browsers, built with React, TypeScript, Tailwind CSS, Vite, and Recharts, backed by a FastAPI REST API and a PostgreSQL/SQLite database engine.
 
 ```
 +--------------------------------------------------------------------------+
-|                               VAULTWISE                                  |
+|                        VAULTWISE WEB PLATFORM                            |
 +--------------------------------------------------------------------------+
 
-      [ WEB PLATFORM ]                                 [ WINDOWS DESKTOP ]
-+---------------------------+                     +---------------------------+
-| React + TypeScript + Vite |                     | Flutter Desktop (Windows) |
-| (Tailwind CSS, Recharts)  |                     | (Material / Fluent Style) |
-+-------------+-------------+                     +-------------+-------------+
-              | HTTPS / JSON                                    | Direct FFI
-+-------------v-------------+                     +-------------v-------------+
-|    FastAPI Backend API    |                     | Local Database Engine     |
-| (Python 3.14 + Pydantic)  |                     | (SQLite + SQLCipher AES)  |
-+-------------+-------------+                     +-------------+-------------+
-              | Asyncpg / SQLAlchemy                            | Windows DPAPI
-+-------------v-------------+                     +-------------v-------------+
-|   PostgreSQL 18 Database  |                     | Windows Credential Locker |
-| (Multi-tenant User Scoped)|                     | (Local Encryption Key)    |
-+---------------------------+                     +---------------------------+
-
-               \                                               /
-                \-- User-Initiated Export / Import (CSV/JSON) -/
-                    (NO automatic or silent background sync)
+      [ WEB FRONTEND APPLICATION ]
++--------------------------------------+
+| React 19 + TypeScript + Vite         |
+| (Tailwind CSS, Recharts, Lucide)     |
++------------------+-------------------+
+                   | HTTPS / JSON API
++------------------v-------------------+
+|      FastAPI Backend API             |
+| (Python 3.12+ / 3.14 + Pydantic v2)  |
++------------------+-------------------+
+                   | Asyncpg / SQLAlchemy 2.0
++------------------v-------------------+
+|   PostgreSQL / SQLite Database       |
+| (Multi-tenant User Scoped Storage)   |
++--------------------------------------+
 ```
 
 ---
 
-## 2. Mandatory Data Isolation: Why Web and Desktop Remain Separate
+## 2. Technology Stack & Component Responsibilities
 
-A primary requirement of Vaultwise is **strict data separation by default**:
-
-- **No Automatic Synchronization**: The desktop application operates completely offline without reporting financial data to any server or cloud database.
-- **Privacy Assurance**: Users who prefer local-only custody of their finances can use the Windows application with zero telemetry, zero accounts, and zero cloud exposure.
-- **Independent Data Models**: The web application persists data in PostgreSQL with multi-tenant row-level authorization. The desktop application persists data in an encrypted SQLite file on the local machine.
-- **User-Initiated Interoperability**: If a user wishes to migrate or transfer records between desktop and web, they must perform an **explicit, user-initiated export and import** workflow. The system warns about potential duplicates and requires review before applying imported records.
-
----
-
-## 3. Technology Stack & Component Responsibilities
-
-### 3.1 Web Application (`apps/web`)
+### 2.1 Web Application (`apps/web`)
 - **Framework**: React 19 / Vite / TypeScript.
 - **Styling**: Tailwind CSS adhering strictly to the **solid colors only** design rule. Absolutely NO gradients are permitted anywhere in the layout, cards, buttons, or charts.
-- **Charts**: Recharts with flat, high-contrast palette.
+- **Charts**: Recharts with flat, high-contrast palette and radial pop-out interactions.
 - **State Management**: React Query / Context API for responsive caching and optimistic UI updates.
 - **PWA Capabilities**: Service worker caching for shell assets and a web application manifest.
 
-### 3.2 FastAPI Backend (`services/api`)
-- **Runtime**: Python 3.14.
+### 2.2 FastAPI Backend (`services/api`)
+- **Runtime**: Python 3.12+ / 3.14.
 - **API Framework**: FastAPI with Pydantic v2 schemas for strict input validation.
-- **Database Access**: SQLAlchemy 2.0 async engine paired with `asyncpg` for PostgreSQL and SQLite for automated unit tests.
+- **Database Access**: SQLAlchemy 2.0 async engine paired with `asyncpg` for PostgreSQL and SQLite for local development and automated unit tests.
 - **Migrations**: Alembic for version-controlled, reproducible schema revisions.
 - **Authentication**: JWT tokens (Access + Refresh) with bcrypt password hashing ($\ge 12$ rounds).
 - **Import/Export Engine**: In-memory spreadsheet parsing via `openpyxl` with formulas disabled, defensive CSV parsing, and PDF report generation.
-
-### 3.3 Windows Desktop Application (`apps/desktop`)
-- **Framework**: Flutter 3.47+ / Dart 3.13+.
-- **Platform Target**: Native Windows desktop (`windows-x64`).
-- **Persistence**: SQLite with SQLCipher encryption (`sqflite_common_ffi` with encryption pragma).
-- **Key Storage**: Windows Credential Locker / DPAPI via `flutter_secure_storage` with Windows DPAPI backend.
-- **Financial Calculations**: Pure Dart domain layer sharing the same calculation formulas and precision rules as the web service.
 
 ---
 

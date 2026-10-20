@@ -14,10 +14,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="40" height="40" alt="Tailwind" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="40" height="40" alt="Flutter" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" width="40" height="40" alt="Dart" />
-&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="40" height="40" alt="SQLite" />
 
 <br/>
@@ -27,11 +23,10 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite_8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
-[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org)
 
 <p align="center">
-  <strong>Comprehensive execution guide for running Vaultwise Web App, FastAPI Backend, and Windows Desktop App.</strong>
+  <strong>Comprehensive execution guide for running Vaultwise Web App & FastAPI Backend.</strong>
 </p>
 
 </div>
@@ -45,10 +40,9 @@
 3. [Quick Start (TL;DR)](#3--quick-start-tldr)
 4. [Part 1: Running FastAPI Backend Server](#4--part-1-running-fastapi-backend-server)
 5. [Part 2: Running React Web Application](#5--part-2-running-react-web-application)
-6. [Part 3: Running Windows Desktop App (Flutter)](#6--part-3-running-windows-desktop-app-flutter)
-7. [Demo Account Credentials](#7--demo-account-credentials)
-8. [Testing & Quality Verification](#8--testing--quality-verification)
-9. [Troubleshooting & FAQs](#9--troubleshooting--faqs)
+6. [Demo Account Credentials](#6--demo-account-credentials)
+7. [Testing & Quality Verification](#7--testing--quality-verification)
+8. [Troubleshooting & FAQs](#8--troubleshooting--faqs)
 
 ---
 
@@ -63,9 +57,7 @@
 | **TypeScript**         |   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="32" height="32" alt="TypeScript" />   |    `~7.0.2`    | Static type safety and developer productivity            |
 | **Vite**               |          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="32" height="32" alt="Vite" />          |    `^8.3.4`    | Next-generation frontend bundler & dev server            |
 | **Tailwind CSS**       | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="32" height="32" alt="Tailwind CSS" /> |   `^3.4.19`    | Utility-first CSS with Neumorphic + Neo-Brutalist tokens |
-| **Flutter**            |       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="32" height="32" alt="Flutter" />        |   `^3.47.0`    | Native Windows desktop compilation target                |
-| **Dart**               |            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" width="32" height="32" alt="Dart" />            |   `^3.13.4`    | Strongly-typed client-side desktop logic                 |
-| **SQLite / SQLCipher** |         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="32" height="32" alt="SQLite" />         |  `3.x / FFI`   | Local storage with AES-256 database encryption           |
+| **SQLite**             |         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="32" height="32" alt="SQLite" />         |  `3.x / FFI`   | Local development database storage                       |
 | **SQLAlchemy**         |   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" width="32" height="32" alt="SQLAlchemy" />   |   `^2.0.38`    | Modern async Python ORM                                  |
 
 ---
@@ -76,8 +68,6 @@ Ensure the following tools are installed on your Windows machine before running 
 
 - [x] **Python 3.12+** (Python 3.13 or 3.14 recommended, with `Add python.exe to PATH` checked).
 - [x] **Node.js v20+** (Node.js v22/v24 LTS recommended) and **npm**.
-- [x] **Flutter SDK 3.47+** (with Windows desktop workload enabled: `flutter config --enable-windows-desktop`).
-- [x] **Visual Studio 2022** with **"Desktop development with C++"** workload (required for Flutter Windows compilation).
 - [x] **PowerShell 7+** or standard Windows PowerShell.
 
 Verify installations in your terminal:
@@ -86,7 +76,6 @@ Verify installations in your terminal:
 python --version
 node --version
 npm --version
-flutter doctor
 ```
 
 ---
@@ -218,51 +207,7 @@ The production preview will be served at:
 
 ---
 
-## 6. 💻 Part 3: Running Windows Desktop App (Flutter)
-
-### Step 1: Navigate to Desktop Directory
-
-```powershell
-cd apps/desktop
-```
-
-### Step 2: Install Flutter Dependencies
-
-```powershell
-flutter pub get
-```
-
-### Step 3: Verify Windows Desktop Target
-
-```powershell
-flutter devices
-```
-
-Ensure `Windows (desktop)` is listed in connected devices.
-
-### Step 4: Launch Native Windows Desktop App
-
-```powershell
-flutter run -d windows
-```
-
-Flutter will build the native C++ wrapper and launch the native desktop window.
-
-### Step 5: Compile Production Release Build (.exe)
-
-```powershell
-flutter build windows
-```
-
-The compiled standalone executable will be generated at:
-
-```text
-apps/desktop/build/windows/x64/runner/Release/desktop.exe
-```
-
----
-
-## 7. 🔑 Demo Account Credentials
+## 6. 🔑 Demo Account Credentials
 
 A pre-seeded demonstration account is available for immediate testing across all apps:
 
@@ -281,7 +226,7 @@ A pre-seeded demonstration account is available for immediate testing across all
 
 ---
 
-## 8. 🧪 Testing & Quality Verification
+## 7. 🧪 Testing & Quality Verification
 
 Run automated test suites to ensure 100% integrity across codebases:
 
@@ -304,16 +249,9 @@ npm test -- --run
 
 _(Runs 4 test files and 8 test cases verifying authentication screens, summary metrics, currency conversions, and pie chart pop-out states)._
 
-### 3. Flutter Desktop Tests
-
-```powershell
-cd apps/desktop
-flutter test
-```
-
 ---
 
-## 9. ❓ Troubleshooting & FAQs
+## 8. ❓ Troubleshooting & FAQs
 
 ### Q1: `activate.ps1 cannot be loaded because running scripts is disabled`
 
@@ -331,17 +269,6 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 Get-Process -Id (Get-NetTCPConnection -LocalPort 8000).OwningProcess | Stop-Process -Force
 uvicorn app.main:app --port 8000 --reload
 ```
-
-### Q3: `Visual Studio toolchain not found` when running Flutter
-
-**Solution**: Open the Visual Studio Installer, click **Modify** on Visual Studio 2022, check **"Desktop development with C++"**, and click **Install**. Then run `flutter doctor`.
-
-### Q4: Are the Web App and Desktop App databases connected?
-
-**No**. Vaultwise strictly adheres to **Data Isolation**:
-
-- The **Web Application** connects to the FastAPI backend database (`services/api/vaultwise_dev.db`).
-- The **Desktop Application** stores records locally inside an encrypted SQLite database on your Windows machine (`%APPDATA%/Vaultwise/vaultwise.db`).
 
 ---
 
